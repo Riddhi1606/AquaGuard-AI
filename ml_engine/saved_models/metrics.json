@@ -1,0 +1,105 @@
+{
+  "active_model": "RandomForest",
+  "features": [
+    "rainfall_intensity_mm_h",
+    "rainfall_cum_3h_mm",
+    "rainfall_cum_24h_mm",
+    "forecast_1h_mm",
+    "elevation_m",
+    "slope_deg",
+    "distance_to_drain_m",
+    "drainage_capacity_m3s",
+    "drainage_status_val",
+    "underpass",
+    "historical_incidents_count",
+    "soil_runoff_coeff"
+  ],
+  "training_samples": 2160,
+  "test_samples": 720,
+  "evaluated_at": "2026-10-31T15:40:06.498994Z",
+  "benchmark_comparison": {
+    "LogisticRegression": {
+      "accuracy": 0.9778,
+      "precision": 0.9565,
+      "recall": 0.9798,
+      "f1_score": 0.968,
+      "roc_auc": 0.9982,
+      "pr_auc": 0.9968,
+      "confusion_matrix": [
+        [
+          462,
+          11
+        ],
+        [
+          5,
+          242
+        ]
+      ],
+      "true_negatives": 462,
+      "false_positives": 11,
+      "false_negatives": 5,
+      "true_positives": 242
+    },
+    "RandomForest": {
+      "accuracy": 0.9875,
+      "precision": 0.9798,
+      "recall": 0.9838,
+      "f1_score": 0.9818,
+      "roc_auc": 0.9938,
+      "pr_auc": 0.9935,
+      "confusion_matrix": [
+        [
+          468,
+          5
+        ],
+        [
+          4,
+          243
+        ]
+      ],
+      "true_negatives": 468,
+      "false_positives": 5,
+      "false_negatives": 4,
+      "true_positives": 243
+    },
+    "XGBoost": {
+      "accuracy": 0.9833,
+      "precision": 0.9719,
+      "recall": 0.9798,
+      "f1_score": 0.9758,
+      "roc_auc": 0.999,
+      "pr_auc": 0.9981,
+      "confusion_matrix": [
+        [
+          466,
+          7
+        ],
+        [
+          5,
+          242
+        ]
+      ],
+      "true_negatives": 466,
+      "false_positives": 7,
+      "false_negatives": 5,
+      "true_positives": 242
+    }
+  },
+  "global_feature_importance": {
+    "rainfall_cum_3h_mm": 2.4406,
+    "underpass": 1.9258,
+    "rainfall_cum_24h_mm": 1.2855,
+    "rainfall_intensity_mm_h": 1.0457,
+    "elevation_m": 1.0053,
+    "forecast_1h_mm": 0.6488,
+    "drainage_capacity_m3s": 0.3007,
+    "historical_incidents_count": 0.2275,
+    "soil_runoff_coeff": 0.22,
+    "distance_to_drain_m": 0.1387,
+    "drainage_status_val": 0.042,
+    "slope_deg": 0.0216
+  },
+  "data_readiness": "Synthetic hydrological simulation benchmark - not validated against observed flood incidents",
+  "dataset_attribution": "Generated synthetic scenarios using rule-based hydrological formulas; not an observed Jaipur incident dataset",
+  "validation_warning": "Reported metrics measure performance on a held-out split of synthetic generated data only. They are not real-world flood prediction accuracy."
+}
