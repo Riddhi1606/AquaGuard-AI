@@ -378,8 +378,4 @@ Follow this 7-step presentation guide for an end-to-end live demonstration:
 
 ---
 
-## 16. License & Hackathon Credits
 
-Built for the **Smart City AI Disaster Resilience Hackathon**.  
-Licensed under the **MIT License**.
-Weather data API powered by Open-Meteo. If you separately fetch and display OpenStreetMap data using the included Overpass helper, comply with OpenStreetMap attribution and ODbL requirements.
